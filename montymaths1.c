@@ -57,6 +57,7 @@ void _pop(stack_t **head, unsigned int line_number)
 void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *current = *head;
+	int check = 0;
 
 	if (!*head)
 	{
@@ -69,11 +70,13 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 	while (current)
 	{
 		if (current->n == 0 || current->n > 127 || current->n < 0)
-			return;
+			break;
 		printf("%c", current->n);
 		current = current->next;
+		check = 1;
 	}
-	printf("\n");
+	if (check > 0)
+		printf("\n");
 }
 /**
  * _rotl - rotates the stack to the top.
