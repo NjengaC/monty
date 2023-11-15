@@ -84,20 +84,22 @@ void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *first, *last;
 
-	if (!head || !(*head)->next)
+	if (!head || !(*head)->next || (*head)->next == NULL)
 		return;
-	first = (*head)->next;
-	last = (*head)->next;
+	first = *head;
+	last = *head;
 
-	while (last->next)
+	while (last->next != NULL)
 	{
 		last = last->next;
 	}
-	first->next->prev = *head;
-	(*head)->next = first->next;
+	*head = first->next;
+	first->next->prev = NULL;
+
 	last->next = first;
-	first->next = NULL;
 	first->prev = last;
+
+	first->next = NULL;
 }
 /**
  * _rotr - rotates the stack to the bottom.
