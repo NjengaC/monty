@@ -57,7 +57,6 @@ void _pop(stack_t **head, unsigned int line_number)
 void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *current = *head;
-	int check = 0;
 
 	if (!*head)
 	{
@@ -65,6 +64,7 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		return;
 	}
 	while (current)
