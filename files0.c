@@ -3,7 +3,7 @@
 
 /**
  * _select - selects functions appropriately
- * @command: command line
+ * @command: the command line
  * @file: the input file
  * @count: count tracker
  * @head: list head

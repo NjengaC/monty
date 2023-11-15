@@ -3,7 +3,7 @@
 /**
  * _pint - prints the value at the top of the stack
  * @head: stacks head
- * @line_number:  line number where the instruction appears.
+ * @line_number:  line number in which the instruction appears.
  * Return: Nothing
  */
 
@@ -24,7 +24,7 @@ void _pint(stack_t **head, unsigned int line_number)
 /**
  * _pop - removes the top element from the stack
  * @head: stack head
- * @line_number:  line number where the instruction appears.
+ * @line_number:  line number in which the instruction appears.
  * Return: Nothing
  */
 void _pop(stack_t **head, unsigned int line_number)
@@ -51,7 +51,7 @@ void _pop(stack_t **head, unsigned int line_number)
 /**
  * _pstr - prints the string starting at the top of the stack
  * @head: head of stack
- * @line_number:  line number where the instruction appears.
+ * @line_number:  line number in which the instruction appears.
  * Return: Nothing
  */
 void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
@@ -77,7 +77,7 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 /**
  * _rotl - rotates the stack to the top.
  * @head: head of the stack.
- * @line_number:  line number where the instruction appears.
+ * @line_number:  line number in which the instruction appears.
  * Return: Nothing.
  */
 void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)))
@@ -105,7 +105,7 @@ void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)))
 /**
  * _rotr - rotates the stack to the bottom.
  * @head: stack's head..
- * @line_number:  line number where the instruction appears.
+ * @line_number:  line number in which the instruction appears.
  * Return: Nothing.
  */
 
