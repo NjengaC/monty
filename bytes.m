@@ -11,5 +11,4 @@ push 111
 push 104
 push 99
 push 83
-push 0
 pstr
