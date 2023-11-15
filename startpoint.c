@@ -22,6 +22,7 @@ void set_state(char *commands)
  * @argv: args vector
  * Return: 0 (Success)
  */
+int main(int argc, char **argv);
 int main(int argc, char **argv)
 {
 	FILE *file;
@@ -52,7 +53,7 @@ int main(int argc, char **argv)
 		{
 			free(store);
 			fclose(file);
-			exit (0);
+			exit(0);
 		}
 		monty._getline = store;
 		count++;
