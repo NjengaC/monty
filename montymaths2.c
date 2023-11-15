@@ -2,7 +2,7 @@
 
 /**
  * _sub - subtracts the top element of the stack from the second top element
- * @head: stack's head
+ * @head: head of the stack
  * @line_number: line number where the instruction appears.
  *
  * Return: nothing
@@ -57,7 +57,7 @@ void _swap(stack_t **head, unsigned int line_number)
 
 /**
  * add_dnodeint_end - adds a new node at the end of a DLL
- * @head: head
+ * @head: head of the stack
  * @n: n member
  * Return: address of new element, or NULL
  */
@@ -95,7 +95,7 @@ stack_t *add_dnodeint_end(stack_t **head, int n)
 
 /**
  * add_dnodeint - add a new node at the beggining of a DLL
- * @head: head
+ * @head: head of the stack
  * @n: n member
  * Return: address of the new node
  */
@@ -125,7 +125,7 @@ stack_t *add_dnodeint(stack_t **head, int n)
 
 /**
  * _nop - doesn't do anything
- * @head: head
+ * @head: head of the stack
  * @line_number: line number where the instruction appears.
  * Return: nothing
  */
