@@ -80,7 +80,7 @@ void _div(stack_t **head, unsigned int line_number)
 /**
  * _mod - computes the rest of the division of the second top element
  * of the stack by the top element
- * @head: stacks head
+ * @head: head of the stack
  * @line_number: line number in which the instruction appears
  *
  * Return: Nothing
@@ -146,7 +146,7 @@ void _mul(stack_t **head, unsigned int line_number)
 }
 /**
  * _pchar - prints the char at the top of the stack
- * @head: stacks head
+ * @head: head of the stack
  * @line_number:line number in which the instruction appears
  *
  * Return: Nothing
