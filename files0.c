@@ -10,6 +10,7 @@
  *
  * Return: nothing
  */
+int _select(char *command, FILE *file, unsigned int count, stack_t **head);
 int _select(char *command, FILE *file, unsigned int count, stack_t **head)
 {
 	char *commands;
