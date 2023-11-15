@@ -133,6 +133,7 @@ void _push(stack_t **head, unsigned int line_number)
 		fclose(monty.file), free(monty._getline), free_stack_t(*head);
 		exit(EXIT_FAILURE);
 	}
+
 	n = atoi(monty.second);
 	if (monty.state == 0)
 	{

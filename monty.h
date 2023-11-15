@@ -90,6 +90,6 @@ void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _rotr(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _div(stack_t **head, unsigned int line_number);
 char *handle_hash(char *buffer);
-
+int whitespace(char *command);
 
 #endif
