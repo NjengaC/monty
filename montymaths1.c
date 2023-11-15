@@ -60,14 +60,15 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 
 	if (!*head)
 	{
-		printf("\n");
+		/*printf("\n");*/
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+		return;
 	}
 	while (current)
 	{
-		if (current->n <= 0 || current->n > 127)
+		if (current->n == 0 || current->n > 127 || current->n < 0)
 			break;
 		printf("%c", current->n);
 		current = current->next;
