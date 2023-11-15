@@ -86,20 +86,20 @@ void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)))
 
 	if (head != NULL && *head != NULL && (*head)->next != NULL)
 	{
-	first = *head;
-	last = *head;
+		first = *head;
+		last = *head;
 
-	while (last->next != NULL)
-	{
-		last = last->next;
-	}
-	*head = first->next;
-	first->next->prev = NULL;
+		while (last->next != NULL)
+		{
+			last = last->next;
+		}
+		*head = first->next;
+		first->next->prev = NULL;
 
-	last->next = first;
-	first->prev = last;
+		last->next = first;
+		first->prev = last;
 
-	first->next = NULL;
+		first->next = NULL;
 	}
 }
 /**
@@ -111,21 +111,23 @@ void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)))
 
 void _rotr(stack_t **head, unsigned int line_number __attribute__((unused)))
 {
-	stack_t *next, *current, *prev;
+	stack_t *first, *last;
 
-	current = *head;
-	prev = NULL;
+	(void)line_number;
 
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
+		return;
 
-	if (*head && (*head)->next != NULL)
-	{
-		while (current)
-		{
-			next = current->next;
-			current->next = prev;
-			prev = current;
-			current = next;
-		}
-		*head = prev;
-	}
+	first = *head;
+	last = *head;
+
+	while (last->next != NULL)
+		last = last->next;
+
+	last->prev->next = NULL;
+	last->prev = NULL;
+	last->next = first;
+	first->prev = last;
+
+	*head = last;
 }
