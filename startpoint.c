@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-track_str monty = {NULL, NULL, NULL, 0, 0, NULL, NULL, NULL};
+track_str monty = {NULL, NULL, 0, 0, NULL, NULL, NULL};
 /**
  * set_state - sets the queue/stack status
  * @commands: command line from file

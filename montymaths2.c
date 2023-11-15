@@ -125,9 +125,11 @@ stack_t *add_dnodeint(stack_t **head, int n)
 
 /**
  * _nop - doesn't do anything
+ * @head: head
+ * @line_number: line number where the instruction appears.
  * Return: nothing
  */
-void _nop(void)
+void _nop(stack_t **head, unsigned int line_number __attribute__((unused)))
 {
-
+	(void)head;
 }

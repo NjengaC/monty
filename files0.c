@@ -12,7 +12,8 @@
  */
 int _select(char *command, FILE *file, unsigned int count, stack_t **head)
 {
-	char *commands, int i = 0;
+	char *commands;
+	int i = 0;
 	instruction_t choice[] = {
 		{"push", _push}, {"pall", _pall}, {"pint", _pint}, {"pop", _pop},
 		{"swap", _swap}, {"add", _add}, {"nop", _nop}, {"div", _div},
