@@ -69,7 +69,7 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 	while (current)
 	{
 		if (current->n == 0 || current->n > 127 || current->n < 0)
-			break;
+			return;
 		printf("%c", current->n);
 		current = current->next;
 	}
