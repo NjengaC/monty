@@ -3,7 +3,7 @@
 /**
  * _add - adds the top 2 elements
  * @head: head of the stack
- * @line_number: line number where the instruction appears
+ * @line_number: line number in which the instruction appears
  *
  * Return: Nothing
  */
@@ -31,9 +31,9 @@ void _add(stack_t **head, unsigned int line_number)
 }
 
 /**
- * _div - divides the second top element of the stack by the top elemen
+ * _div - divides the second top element of the stack by the top element
  * *@head: head of the stack
- * @line_number: line number where the instruction appears
+ * @line_number: line number in which the instruction appears
  * Return: Nothing
  */
 
@@ -81,7 +81,7 @@ void _div(stack_t **head, unsigned int line_number)
  * _mod - computes the rest of the division of the second top element
  * of the stack by the top element
  * @head: stacks head
- * @line_number: line number where the instruction appears
+ * @line_number: line number in which the instruction appears
  *
  * Return: Nothing
  */
@@ -117,9 +117,10 @@ void _mod(stack_t **head, unsigned int line_number)
 	free(current);
 }
 /**
- * _mul -  multiplies the second top element of the stack with the top element
+ * _mul -  multiplies the second top element
+ * of the stack with the top element
  * @head: head of the stack.
- * @line_number: line number where the instruction appears
+ * @line_number: line number in which the instruction appears
  *
  * Return: Nothing
  */
@@ -146,7 +147,7 @@ void _mul(stack_t **head, unsigned int line_number)
 /**
  * _pchar - prints the char at the top of the stack
  * @head: stacks head
- * @line_number:line number where the instruction appears
+ * @line_number:line number in which the instruction appears
  *
  * Return: Nothing
  */
