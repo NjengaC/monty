@@ -71,7 +71,8 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 	{
 		if (current->n == 0 || current->n > 127 || current->n < 0)
 			break;
-		printf("%c", current->n);
+		/*printf("%c", current->n);*/
+		putchar((char)current->n);
 		current = current->next;
 	}
 	printf("\n");
