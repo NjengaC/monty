@@ -48,6 +48,12 @@ int main(int argc, char **argv)
 	{
 		store = NULL;
 		reads = getline(&store, &index, file);
+		if (store[0] == '\n')
+		{
+			free(store);
+			fclose(file);
+			exit (0);
+		}
 		monty._getline = store;
 		count++;
 		monty.track = count;
