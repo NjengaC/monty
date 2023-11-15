@@ -138,7 +138,7 @@ void _push(stack_t **head, unsigned int line_number)
 	{
 		if (add_dnodeint(head, n) == NULL)
 		{
-			fprintf(stderr, "Error: malloc failed");
+			fprintf(stderr, "Error: malloc failed\n");
 			fclose(monty.file), free(monty._getline);
 			free_stack_t(*head), exit(EXIT_FAILURE);
 		}
@@ -147,7 +147,7 @@ void _push(stack_t **head, unsigned int line_number)
 	{
 		if (add_dnodeint_end(head, n) == NULL)
 		{
-			fprintf(stderr, "Error: malloc failed");
+			fprintf(stderr, "Error: malloc failed\n");
 			fclose(monty.file), free(monty._getline);
 			free_stack_t(*head), exit(EXIT_FAILURE);
 		}
