@@ -74,7 +74,6 @@ int main(int argc, char **argv)
 	{
 		if (store[0] == '\n' || (whitespace(store)) == 1)
 		{
-			store = NULL;
 			continue;
 		}
 		monty._getline = store;
