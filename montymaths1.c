@@ -73,10 +73,8 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 			break;
 		printf("%c", current->n);
 		current = current->next;
-		check = 1;
 	}
-	if (check > 0)
-		printf("\n");
+	printf("\n");
 }
 /**
  * _rotl - rotates the stack to the top.
