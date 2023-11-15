@@ -88,7 +88,6 @@ int main(int argc, char **argv)
 	}
 	free(store);
 	fclose(file);
-	if (monty.head)
-		free_stack_t(*(monty.head));
+	free_stack_t(*(monty.head));
 	return (0);
 }
