@@ -74,6 +74,7 @@ int main(int argc, char **argv)
 	{
 		if (store[0] == '\n' || (whitespace(store)) == 1)
 		{
+			store = NULL;
 			continue;
 		}
 		monty._getline = store;
@@ -87,6 +88,7 @@ int main(int argc, char **argv)
 	}
 	free(store);
 	fclose(file);
-	free_stack_t(*(monty.head));
+	if (monty.head)
+		free_stack_t(*(monty.head));
 	return (0);
 }
