@@ -6,6 +6,7 @@
 track_str monty = {NULL, NULL, NULL, 0, 0, NULL, NULL, NULL};
 /**
  * set_state - sets the queue/stack status
+ * @commands: command line from file
  * Return: 0
  */
 void set_state(char *commands)

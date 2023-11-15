@@ -15,6 +15,7 @@ void _pint(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*head)->n);
@@ -36,6 +37,7 @@ void _pop(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 

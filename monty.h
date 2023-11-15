@@ -45,20 +45,18 @@ typedef struct instruction_s
 
 /**
  * struct track_str - structure to track runtime execution
- * @guide: string
  * @first: the first tokenized word
  * @second: the second tokenized word
  * @state: queue/stack?
- * @tarck: line track
+ * @track: line track
  * @head: the head of the linked list
  * @file: sourcefile
- * @_getline: a lin ein the input file
+ * @_getline: line from the file
  *
  * Description: short description, Structure
  */
 typedef struct track_str
 {
-	char *guide;
 	char *first;
 	char *second;
 	int state;
@@ -82,7 +80,7 @@ void _pint(stack_t **head, unsigned int line_number);
 void _pop(stack_t **head, unsigned int line_number);
 void _swap(stack_t **head, unsigned int line_number);
 void _add(stack_t **head, unsigned int line_number);
-void _nop();
+void _nop(void);
 void _sub(stack_t **head, unsigned int line_number);
 void _mul(stack_t **head, unsigned int line_number);
 void _mod(stack_t **head, unsigned int line_number);
@@ -91,7 +89,6 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _rotr(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _div(stack_t **head, unsigned int line_number);
-void check_second(void);
 char *handle_hash(char *buffer);
 
 

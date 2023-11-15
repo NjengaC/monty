@@ -19,6 +19,7 @@ void _add(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -54,6 +55,7 @@ void _div(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -64,6 +66,7 @@ void _div(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -75,7 +78,7 @@ void _div(stack_t **head, unsigned int line_number)
 }
 
 /**
- * _mod - computes the rest of the division of the second top element 
+ * _mod - computes the rest of the division of the second top element
  * of the stack by the top element
  * @head: stacks head
  * @line_number: line number where the instruction appears
@@ -93,6 +96,7 @@ void _mod(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -102,6 +106,7 @@ void _mod(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -130,6 +135,7 @@ void _mul(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	res = current->next->n * current->n;
@@ -153,6 +159,7 @@ void _pchar(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	if ((*head)->n < 0 || (*head)->n > 127)
@@ -161,6 +168,7 @@ void _pchar(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	printf("%c\n", (*head)->n);

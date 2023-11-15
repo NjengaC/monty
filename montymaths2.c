@@ -19,6 +19,7 @@ void _sub(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -45,6 +46,7 @@ void _swap(stack_t **head, unsigned int line_number)
 		fclose(monty.file);
 		free(monty._getline);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	current = (*head)->n;
@@ -58,7 +60,7 @@ void _swap(stack_t **head, unsigned int line_number)
  * @head: head
  * @n: n member
  * Return: address of new element, or NULL
- */     
+ */
 stack_t *add_dnodeint_end(stack_t **head, int n)
 {
 	stack_t *new, *temp;
@@ -125,7 +127,7 @@ stack_t *add_dnodeint(stack_t **head, int n)
  * _nop - doesn't do anything
  * Return: nothing
  */
-void _nop()
+void _nop(void)
 {
 
 }

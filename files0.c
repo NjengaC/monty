@@ -12,17 +12,12 @@
  */
 int _select(char *command, FILE *file, unsigned int count, stack_t **head)
 {
-       	char *commands;
-	int i = 0;
+	char *commands, int i = 0;
 	instruction_t choice[] = {
-		{"push", _push}, {"pall", _pall},
-		{"pint",_pint}, {"pop", _pop},
-		{"swap", _swap}, {"add", _add},
-		{"nop", _nop}, {"div", _div},
-		{"sub", _sub}, {"mul", _mul},
-		{"mod", _mod}, {"pchar", _pchar},
-		{"pstr", _pstr}, {"rotr", _rotr},
-		{"rotl", _rotl}, {NULL, NULL}
+		{"push", _push}, {"pall", _pall}, {"pint", _pint}, {"pop", _pop},
+		{"swap", _swap}, {"add", _add}, {"nop", _nop}, {"div", _div},
+		{"sub", _sub}, {"mul", _mul}, {"mod", _mod}, {"pchar", _pchar},
+		{"pstr", _pstr}, {"rotr", _rotr}, {"rotl", _rotl}, {NULL, NULL}
 	};
 
 	commands = strtok(command, " \n\t");
@@ -47,13 +42,13 @@ int _select(char *command, FILE *file, unsigned int count, stack_t **head)
 		}
 		i++;
 	}
-
 	if (commands && choice[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, commands);
 		fclose(file);
 		free(command);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	return (0);
@@ -109,6 +104,7 @@ void free_stack_t(stack_t *head)
  *
  * Return: Nothing
  */
+void _push(stack_t **head, unsigned int line_number);
 void _push(stack_t **head, unsigned int line_number)
 {
 	int n, j = 0, status = 0;
@@ -135,7 +131,6 @@ void _push(stack_t **head, unsigned int line_number)
 		fclose(monty.file), free(monty._getline), free_stack_t(*head);
 		exit(EXIT_FAILURE);
 	}
-
 	n = atoi(monty.second);
 	if (monty.state == 0)
 	{
