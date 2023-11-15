@@ -60,11 +60,6 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)))
 
 	if (!*head)
 	{
-		printf("\n");
-	/*	fclose(monty.file);
-		free(monty._getline);
-		free_stack_t(*head);
-*/
 		return;
 	}
 	while (current)
