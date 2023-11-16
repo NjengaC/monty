@@ -118,7 +118,10 @@ void _push(stack_t **head, unsigned int line_number)
 		for (; monty.second[j] != '\0'; j++)
 		{
 			if (monty.second[j] > 57 || monty.second[j] < 48)
+			{
 				status = 1;
+				break;
+			}
 		}
 		if (status == 1)
 		{
