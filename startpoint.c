@@ -5,6 +5,30 @@
 
 track_str monty = {NULL, NULL, 0, 0, NULL, NULL, NULL};
 /**
+ * whitespace - checks for white spaces
+ * @command: command input
+ * Return: 0 is command consist of whitespaces
+ */
+int whitespace(char *command)
+{
+	int i;
+	int count = 0;
+	int len;
+
+
+	len = strlen(command);
+	for (i = 0; i < len; i++)
+	{
+		if (command[i] == ' ' || command[i] == '\t' || command[i] == '\n')
+			count++;
+		else
+			return (0);
+	}
+	return (1);
+}
+
+
+/**
  * set_state - sets the queue or stack status
  * @commands: command line from file
  * Return: 0
@@ -22,13 +46,14 @@ void set_state(char *commands)
  * @argv: args vector
  * Return: 0 (Success)
  */
+int main(int argc, char **argv);
 int main(int argc, char **argv)
 {
 	FILE *file;
 	unsigned int count = 0;
-	ssize_t reads = 1;
+	ssize_t reads;
 	size_t index = 0;
-	char *store;
+	char *store = NULL;
 	stack_t *head = NULL;
 
 	if (argc != 2)
@@ -44,25 +69,23 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (reads > 0)
+
+	while ((reads = getline(&store, &index, file)) != -1)
 	{
-		store = NULL;
-		reads = getline(&store, &index, file);
-		if (store[0] == '\n')
+		if (store[0] == '\n' || (whitespace(store)) == 1)
 		{
-			free(store);
-			fclose(file);
-			exit (0);
+			continue;
 		}
 		monty._getline = store;
 		count++;
 		monty.track = count;
-		if (reads > 0)
+		if (reads)
 		{
 			_select(store, file, count, &head);
 		}
-		free(store);
+		/*free(store);*/
 	}
+	free(store);
 	fclose(file);
 	free_stack_t(*(monty.head));
 	return (0);

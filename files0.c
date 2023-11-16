@@ -133,12 +133,13 @@ void _push(stack_t **head, unsigned int line_number)
 		fclose(monty.file), free(monty._getline), free_stack_t(*head);
 		exit(EXIT_FAILURE);
 	}
+
 	n = atoi(monty.second);
 	if (monty.state == 0)
 	{
 		if (add_dnodeint(head, n) == NULL)
 		{
-			fprintf(stderr, "Error: malloc failed");
+			fprintf(stderr, "Error: malloc failed\n");
 			fclose(monty.file), free(monty._getline);
 			free_stack_t(*head), exit(EXIT_FAILURE);
 		}
@@ -147,7 +148,7 @@ void _push(stack_t **head, unsigned int line_number)
 	{
 		if (add_dnodeint_end(head, n) == NULL)
 		{
-			fprintf(stderr, "Error: malloc failed");
+			fprintf(stderr, "Error: malloc failed\n");
 			fclose(monty.file), free(monty._getline);
 			free_stack_t(*head), exit(EXIT_FAILURE);
 		}
@@ -156,7 +157,7 @@ void _push(stack_t **head, unsigned int line_number)
 /**
  * _pall - prints all the values on the stack
  * @head: head of the stack
- * @line_number: line_number
+ * @line_number: line_number where the instruction appear
  *
  * Return: Nothing
  */
@@ -164,12 +165,14 @@ void _pall(stack_t **head, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *current = *head;
 
-	if (current != NULL)
+	if (current == NULL)
 	{
-		while (current != NULL)
-		{
-			printf("%d\n", current->n);
-			current = current->next;
-		}
+		return;
 	}
+	while (current != NULL)
+	{
+		printf("%d\n", current->n);
+		current = current->next;
+	}
+
 }
