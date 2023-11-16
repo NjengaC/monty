@@ -72,7 +72,7 @@ int main(int argc, char **argv)
 
 	while ((reads = getline(&store, &index, file)) != -1)
 	{
-		if (store[0] == '\n' || (whitespace(store)) == 1)
+		if (*store == '\n' || (whitespace(store)) == 1)
 		{
 			continue;
 		}
@@ -83,10 +83,11 @@ int main(int argc, char **argv)
 		{
 			_select(store, file, count, &head);
 		}
-		/*free(store);*/
 	}
-	free(store);
+	if (store != NULL)
+		free(store);
 	fclose(file);
-	free_stack_t(*(monty.head));
+	if (monty.head != NULL)
+		free_stack_t(*(monty.head));
 	return (0);
 }
