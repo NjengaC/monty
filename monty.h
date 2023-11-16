@@ -69,26 +69,25 @@ typedef struct track_str
 extern track_str monty;
 
 int _select(char *command, FILE *file, unsigned int count, stack_t **head);
-int execute(stack_t **head, unsigned int count);
 void free_stack_t(stack_t *head);
-stack_t *add_dnodeint(stack_t **head, int n);
-stack_t *add_dnodeint_end(stack_t **head, int n);
 void _pall(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _push(stack_t **head, unsigned int line_number);
 void set_state(char *commands);
+stack_t *add_dnodeint(stack_t **head, int n);
+stack_t *add_dnodeint_end(stack_t **head, int n);
 void _pint(stack_t **head, unsigned int line_number);
 void _pop(stack_t **head, unsigned int line_number);
 void _swap(stack_t **head, unsigned int line_number);
+void _div(stack_t **head, unsigned int line_number);
 void _add(stack_t **head, unsigned int line_number);
-void _nop(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _sub(stack_t **head, unsigned int line_number);
+void _nop(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _mul(stack_t **head, unsigned int line_number);
 void _mod(stack_t **head, unsigned int line_number);
 void _pchar(stack_t **head, unsigned int line_number);
 void _pstr(stack_t **head, unsigned int line_number __attribute__((unused)));
-void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)));
 void _rotr(stack_t **head, unsigned int line_number __attribute__((unused)));
-void _div(stack_t **head, unsigned int line_number);
+void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)));
 char *handle_hash(char *buffer);
 int whitespace(char *command);
 

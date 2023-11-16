@@ -6,9 +6,6 @@ Function Call Management:
 Stacks are used to manage function calls in programming. Each function call is pushed onto the stack, and when a function completes, it is popped off the stack.
 Expression Evaluation:
 
-Stacks are used in evaluating expressions, especially in languages where expressions are represented in line_numbertfix (or reverse Polish) notation.
-Undo Mechanisms in Software:
-
 Many applications use stacks to implement an undo feature. Each action that changes the state of the application is pushed onto the stack, and undoing an action involves popping it from the stack.
 Parsing in Compilers:
 
