@@ -32,7 +32,7 @@ void _sub(stack_t **head, unsigned int line_number)
 /**
  * _swap - swaps the top two elements of the stack
  * @head: head of the stack
- * @line_number: line number in which the instruction appears.
+ * @line_number: line number where the instruction appears.
  *
  * Return: Nothing
  */
