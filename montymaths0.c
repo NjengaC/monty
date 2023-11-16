@@ -3,7 +3,7 @@
 /**
  * _add - adds the top 2 elements
  * @head: head of the stack
- * @line_number: line number in which the instruction appears
+ * @line_number: line number where the instruction appears
  *
  * Return: Nothing
  */
