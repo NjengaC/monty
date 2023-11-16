@@ -51,4 +51,4 @@ Stacks can be used to implement browser history, where each visited page is push
 Task Management:
 
 Stacks and queues can be used in task management systems, where tasks are added to queues and processed based on priority or order of arrival.
-Understanding the characteristics and behaviors of stacks and queues is crucial for choosing the appropriate data structure for a specific problem or application.
+Understanding the characteristics and behaviors of stacks and queues is crucial for choosing the appropriate data structure for a specific problem or appllications.
