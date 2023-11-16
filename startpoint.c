@@ -42,8 +42,8 @@ void set_state(char *commands)
 }
 /**
  * main - main entry point
- * @argc: args count.
- * @argv: args vector.
+ * @argc: args count
+ * @argv: args vector
  * Return: 0 (Success)
  */
 int main(int argc, char **argv);
