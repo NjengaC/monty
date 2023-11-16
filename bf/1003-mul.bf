@@ -24,4 +24,4 @@
  <[<]>-
 ]
 >>[.<<]<[<<]>>.
->>>>>>>>>>>>>>>>>>>>>>>++++++++++. #extra characters ( not neccesary)
+>>>>>>>>>>>>>>>>>>>>>>>++++++++++. #extra characters ( not a must)
