@@ -103,7 +103,7 @@ void _rotl(stack_t **head, unsigned int line_number __attribute__((unused)))
 }
 /**
  * _rotr - rotates the stack to the bottom.
- * @head: stack's head..
+ * @head: head of the stack
  * @line_number:  line number in which the instruction appears.
  * Return: Nothing.
  */
