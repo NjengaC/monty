@@ -49,7 +49,7 @@ typedef struct instruction_s
  * @second: the second tokenized word
  * @state: queue/stack?
  * @track: line track
- * @head: the head of the linked list
+ * @head: head of the linked list
  * @file: sourcefile
  * @_getline: line from the file
  *
