@@ -74,6 +74,7 @@ int main(int argc, char **argv)
 	{
 		if (*store == '\n' || (whitespace(store)) == 1)
 		{
+			count++;
 			continue;
 		}
 		monty._getline = store;
